@@ -23,15 +23,9 @@
 #     sinon
 #         exécuter clear
 
-# Afficher Titre
-#     calculer la longueur du texte + 4
-#     afficher une ligne de "=" de cette longueur
-#     afficher "| texte |"
-#     afficher une ligne de "=" de cette longueur
 
 # Menu Principal
 # Effacer l'écran
-# Afficher Titre "JEU DES VAGUES"
 # Récupérer un choix valide parmi ["jouer", "score", "quitter"]
 # retourner le choix
 
@@ -56,7 +50,6 @@
 #     afficher "Choisis tes personnages (n sur 3)"
 #     pour chaque personnage dans disponibles avec enumerate(start=1)
 #         afficher (i). nom, PV, attaque
-#     afficher "0. annuler"
 #     récupérer un choix valide parmi 0 et le nombre de disponibles
 #     si le choix est 0
 #         retourner rien (annulation)
@@ -65,3 +58,23 @@
 #     afficher "nom ajouté à ton équipe"
 #     attendre une seconde
 # retourner l'équipe
+
+# Sous-menu Score
+# Effacer l'écran
+# Afficher Titre "SCORES"
+# Charger tous les scores depuis la base
+# si la base est inaccessible
+#     afficher un message d'erreur
+# si la liste est vide
+#     afficher "aucun score pour l'instant"
+# sinon
+#     trier la liste du plus grand au plus petit
+#     pour chaque score dans la liste
+#         afficher la vague et la date
+# afficher "1. retour au menu"
+# récupérer un choix valide parmi [1]
+# retourner au menu principal
+
+
+#lancer la partie
+#   
