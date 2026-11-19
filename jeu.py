@@ -123,3 +123,52 @@
 # Retirer les dégâts aux PV de la cible
 # Afficher "attaquant attaque cible : dégâts, il reste PV" (les PV ne descendent jamais sous 0)
 # Si les PV de la cible sont 0 ou moins : afficher "cible est morte"
+
+# Combat tour par tour (équipe du joueur, ennemi)
+# Tant que le joueur a au moins un vivant et l'ennemi a encore des PV
+#     Pour chaque personnage vivant du joueur
+#         Si l'ennemi n'a plus de PV : sortir de la boucle
+#         Le personnage attaque l'ennemi
+#     Si l'ennemi a encore des PV et qu'il reste un personnage vivant
+#         L'ennemi attaque un personnage vivant du joueur
+# Retourner True si le joueur a encore un vivant, sinon False
+
+
+# Générer l'ennemi d'une vague (numéro de vague)
+# Nom = "Ennemi" + vague
+# PV = 20 + vague * 5
+# Attaque = 5 + vague
+# Retourner l'ennemi (nom, pv, attaque)
+
+
+# Lancer la partie (équipe)
+# Vague = 1
+# Tant que le joueur n'a pas perdu
+#     Effacer l'écran
+#     Afficher "VAGUE" + vague
+#     Générer l'ennemi de la vague
+#     Lancer le combat tour par tour (équipe, ennemi)
+#     Si le joueur a gagné
+#         Afficher "Vague gagnée"
+#         Vague = vague + 1
+#         Attendre deux secondes
+#     Sinon : sortir de la boucle
+# Afficher "Défaite à la vague" + vague
+# Meilleure = la meilleure vague dans les scores (ou 0 si vide)
+# Si vague > meilleure
+#     Enregistrer la vague
+#     Afficher "Nouveau record !"
+# Sinon
+#     Afficher "Pas de nouveau record, record actuel : meilleure"
+# Attendre Entrée pour revenir au menu
+
+
+# Boucle principale
+# Ouvrir la base au démarrage
+# Tant que le programme tourne
+#     Afficher le menu principal et récupérer le choix
+#     Si 1 : aller au sous-menu Jouer
+#     Si 2 : aller au sous-menu Score
+#     Si 3 : aller au sous-menu Quitter, et sortir de la boucle si l'utilisateur confirme
+# Fermer la base (à la fin du programme, avant "À bientôt !")
+# Afficher "À bientôt !"
