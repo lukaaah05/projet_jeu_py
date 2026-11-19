@@ -1,4 +1,3 @@
-# Imports et constantes
 # Importer os 
 # Importer MongoClient 
 # Importer random 
@@ -58,8 +57,7 @@
 # Tant que infini
 #     Afficher les options numérotées
 #     Demander un choix à l'utilisateur
-#     Si le choix est valide : retourner le choix valide (en nombre entier)
-#     Afficher un message d'erreur
+#     Si le choix est valide : retourner le choix valide 
 
 
 # Menu Principal
@@ -77,6 +75,7 @@
 #     Afficher "Choisis tes personnages (n sur 3)"
 #     Récupérer un choix valide parmi 0 et le nombre de disponibles
 #     Si le choix est 0 : retourner rien (annulation)
+#     afficher l'equipe
 #     Retirer le personnage choisi de "disponibles"
 #     Ajouter ce personnage à l'équipe
 #     Attendre une seconde
@@ -87,7 +86,6 @@
 # Effacer l'écran
 # Afficher titre "JOUER"
 # Charger la liste des personnages depuis la base
-# Si la base est inaccessible : afficher un message d'erreur, attendre Entrée, retourner au menu
 # Sélectionner l'équipe
 # Si l'équipe est annulée : retourner au menu
 # Lancer la partie avec l'équipe
@@ -125,12 +123,13 @@
 # Si les PV de la cible sont 0 ou moins : afficher "cible est morte"
 
 # Combat tour par tour (équipe du joueur, ennemi)
-# Tant que le joueur a au moins un vivant et l'ennemi a encore des PV
+# Tant que le l'equipe est en vie et l'ennemi est en vie
 #     Pour chaque personnage vivant du joueur
 #         Si l'ennemi n'a plus de PV : sortir de la boucle
 #         Le personnage attaque l'ennemi
-#     Si l'ennemi a encore des PV et qu'il reste un personnage vivant
+#     Si l'ennemi a encore des PV
 #         L'ennemi attaque un personnage vivant du joueur
+#       
 # Retourner True si le joueur a encore un vivant, sinon False
 
 
@@ -148,11 +147,9 @@
 #     Afficher "VAGUE" + vague
 #     Générer l'ennemi de la vague
 #     Lancer le combat tour par tour (équipe, ennemi)
-#     Si le joueur a gagné
+#     Si le joueur a gagné*
 #         Afficher "Vague gagnée"
 #         Vague = vague + 1
-#         Attendre deux secondes
-#     Sinon : sortir de la boucle
 # Afficher "Défaite à la vague" + vague
 # Meilleure = la meilleure vague dans les scores (ou 0 si vide)
 # Si vague > meilleure
